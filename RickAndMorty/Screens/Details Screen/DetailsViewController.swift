@@ -63,9 +63,11 @@ private extension DetailsViewController {
             do {
                 try await viewModel.loadData()
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.loadImage()
-                }
+                // TODO: Uncomment and remove `loadImage()` to see the loading indicators
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                    self.loadImage()
+//                }
+                loadImage()
             } catch { }
         }
     }

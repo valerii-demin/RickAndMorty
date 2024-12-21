@@ -66,9 +66,11 @@ private extension ListCellView {
     
     func configureSubviews() {
         label.text = viewModel?.name
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.loadImage()
-        }
+        // TODO: Uncomment and remove `loadImage()` to see the loading indicators
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//            self.loadImage()
+//        }
+        loadImage()
     }
     
     func loadImage() {
